@@ -2,7 +2,7 @@
 
 mkdir -p /topbeat/config && mkdir -p /topbeat/data
 
-export SHIPPER_NAME=$(`cat /host-hostname`)
+export SHIPPER_NAME=$(cat /host-hostname)
 cp /topbeat/topbeat.logstash.yml /topbeat/config/topbeat.yml
 
 if [ -z $DRY_RUN ]; then
