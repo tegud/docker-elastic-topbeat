@@ -10,45 +10,12 @@ Docker image for Elastic Topbeat
 
 # Usage
 
-### Elasticsearch
 
-      docker run -d \
-        --link=elasticsearch:elasticsearch \
-        --name=topbeat \
-        --pid=host \
-        athieriot/topbeat
-      
 ### Logstash
 
       docker run -d \
         -e PROFILE=logstash \
         --link=logstash:logstash \
-        --name=topbeat \
-        --pid=host \
-        athieriot/topbeat
-
-### File
-
-      docker run -d \
-        -e PROFILE=file \
-        -v /path/to/data/:/topbeat/data/ \
-        --name=topbeat \
-        --pid=host \
-        athieriot/topbeat
-
-### Console
-
-      docker run -d \
-        -e PROFILE=console \
-        --name=topbeat \
-        --pid=host \
-        athieriot/topbeat
-
-### Custom configuration file
-
-      docker run -d \
-        -e PROFILE=custom \
-        -v /path/to/config/topbeat.yml:/topbeat/config/topbeat.yml \
         --name=topbeat \
         --pid=host \
         athieriot/topbeat
