@@ -29,7 +29,7 @@ output:
 
     # Number of workers per Logstash host.
     #worker: 1
-    
+
     # Set gzip compression level.
     #compression_level: 3
 
@@ -111,15 +111,15 @@ logging:
 
   # Write all logging output to files. Beats automatically rotate files if rotateeverybytes
   # limit is reached.
-  #to_files: false
+  to_files: true
 
   # To enable logging to files, to_files option has to be set to true
   files:
     # The directory where the log files will written to.
-    #path: /var/log/mybeat
+    path: /var/log/beats
 
     # The name of the files where the logs are written to.
-    #name: mybeat
+    name: topbeat
 
     # Configure log file size limit. If limit is reached, log file will be
     # automatically rotated
@@ -135,4 +135,4 @@ logging:
 
   # Sets log level. The default log level is error.
   # Available log levels are: critical, error, warning, info, debug
-  #level: error
+  level: debug

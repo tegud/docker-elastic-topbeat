@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Aurélien Thieriot <aurelien@scalar.is>
+MAINTAINER Steve Elliott <steve@tegud.net>
 
 RUN apt-get update && apt-get install -y curl
 
